@@ -1,0 +1,16 @@
+# /etc/initcpio/install/crypt-post
+#!/bin/bash
+
+build(){
+  SCRIPT="crypt-post"
+  add_binary "cat"
+  add_file "/etc/crypt-post-issue"
+  add_runscript
+}
+
+help(){
+  cat <<HELPEOF
+A simple initcpio hook, which can display a file like /etc/issue after disk encryption password prompt for 'legal' reasons.
+HELPEOF
+}
+

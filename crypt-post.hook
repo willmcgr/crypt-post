@@ -1,0 +1,6 @@
+# /etc/initcpio/hook/crypt-post
+
+run_hook(){
+	hook_name="crypt-post"
+	cat /etc/crypt-post-issue
+}
